@@ -11,7 +11,10 @@ export class QuizService {
 
   getQuestions(): Observable<any> {
     // return this.http.get(this._url);
-    return this.http.get(this.apiUrl);
+    return this.http.get(this.apiUrl).pipe(
+      retry(3),
+      catchError(this.handleError)
+    );
   }
 
   // generic error handler

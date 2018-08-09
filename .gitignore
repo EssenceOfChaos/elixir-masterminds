@@ -3,6 +3,7 @@
 # Sensitive files #
 /src/app/auth/auth0-vars.ts
 .env
+/src/app/quiz/answers.ts
 #####
 # compiled output
 /dist

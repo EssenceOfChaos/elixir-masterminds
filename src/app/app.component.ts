@@ -7,7 +7,7 @@ import { AuthService } from './auth/auth.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  title = 'Elixir Quiz';
+  title = 'This will soon be the <tip-of-the-day>';
   profile: any;
 
   constructor(public auth: AuthService) {
