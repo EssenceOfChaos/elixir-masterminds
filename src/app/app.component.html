@@ -1,0 +1,33 @@
+<header>
+  <mat-toolbar color="primary">
+    <h1>
+      <a class="title no-decor" routerLink="/">Elixir Masterminds</a>
+    </h1>
+
+    <!-- This fills the remaining space of the current row -->
+    <span class="fill-space"></span>
+
+    <button mat-button *ngIf="!auth.isAuthenticated()" (click)="auth.login()">
+      Log in
+    </button>
+    <button mat-button *ngIf="auth.isAuthenticated() && auth.userHasScopes(['write:messages'])" routerLink="/admin">
+      Admin Area
+    </button>
+    <button mat-button *ngIf="auth.isAuthenticated()" routerLink="/leaderboard">
+      Leaderboard
+    </button>
+    <button mat-button *ngIf="auth.isAuthenticated()" routerLink="/profile">
+      Profile
+    </button>
+    <button mat-button *ngIf="auth.isAuthenticated()" (click)="auth.logout()">
+      Log Out
+    </button>
+  </mat-toolbar>
+</header>
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+
+
+  <router-outlet></router-outlet>

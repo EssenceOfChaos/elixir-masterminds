@@ -1,0 +1,58 @@
+{
+  "questions": [{
+      "id": 0,
+      "question": "Skip this question start at index 1",
+      "choices": ["do", "you", "understand", "this"]
+    },
+    {
+      "id": 1,
+      "question": "Elixir is a dynamic, functional language that leverages the _______, known for running low-latency, distributed and fault-tolerant systems.",
+      "choices": [
+        "Java Virtual Machine",
+        "Erlang Virtual Machine",
+        "GNU Compiler Collection (GCC)",
+        "Cross-transactional Binary Compiler"
+      ]
+    },
+    {
+      "id": 2,
+      "question": "Which of the following is NOT a built-in data type in Elixir? ",
+      "choices": ["Map", "Atom", "Array", "String"]
+    },
+    {
+      "id": 3,
+      "question": "Which of the following callbacks handle asynchronous requests in GenServer? ",
+      "choices": ["handle_call", "handle_cast", "handle_async", "reply"]
+    },
+    {
+      "id": 4,
+      "question": "If the variable 'list' is bound to: `[1, 2, 3]`, what is the result of the following expression, `[4, 5 | list]` ? ",
+      "choices": ["[1, 2, 3, 4, 5]", "[4, 5, 1, 2, 3]", "[4, 5]", "The expression contains an error"]
+    },
+    {
+      "id": 5,
+      "question": "What is the result of the following expression: `String.graphemes(\"elixir\")` ? ",
+      "choices": ["[\"e\",\"l\",\"i\",\"x\",\"i\",\"r\"]", "elixir", "true", "false"]
+    },
+    {
+      "id": 6,
+      "question": "Which of the following function calls returns the number of elements inside of a Tuple?  ",
+      "choices": ["Tuple.length()", "Tuple.size()", "tuple_size()", "There is no such function"]
+    },
+    {
+      "id": 7,
+      "question": "A private function can be defined by using... ",
+      "choices": ["private", "priv", "defp", "defmacro"]
+    },
+    {
+      "id": 8,
+      "question": "All functions must be defined within a module. ",
+      "choices": ["true", "false"]
+    },
+    {
+      "id": 9,
+      "question": "What will be the result of 'a' in the following pattern match? '[a, _, c] = [:hello, :world, :error]' ? ",
+      "choices": ["The match will fail", ":hello", ":world", "[:hello, :world, :error]"]
+    }
+  ]
+}

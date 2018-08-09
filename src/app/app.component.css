@@ -1,0 +1,12 @@
+.fill-space {
+  flex: 1 1 auto;
+}
+
+.title.no-decor {
+  text-decoration: none;
+  color: azure
+}
+
+.title.no-decor:hover {
+  text-shadow: 2px 2px 4px #000000;
+}
