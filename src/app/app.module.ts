@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 // import services
 import { AuthService } from './auth/auth.service';
 import { AuthGuardService } from './auth/auth-guard.service';
 import { ScopeGuardService } from './auth/scope-guard.service';
-
+import { QuizService } from './quiz/quiz.service';
 // import material design module
 import { MaterialModule } from './material/material.module';
 import { HomeComponent } from './home/home.component';
@@ -27,8 +29,15 @@ import { CallbackComponent } from './callback/callback.component';
     QuizComponent,
     CallbackComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, MaterialModule],
-  providers: [AuthService, AuthGuardService, ScopeGuardService],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MaterialModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+  ],
+  providers: [AuthService, AuthGuardService, ScopeGuardService, QuizService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
