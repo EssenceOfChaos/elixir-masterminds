@@ -1,3 +1,34 @@
-<p>
-  leaderboard works!
-</p>
+<h2 style="text-align:center;">
+  The Leaderboard
+</h2>
+<div class="example-container mat-elevation-z8">
+  <mat-table [dataSource]="dataSource" matSort>
+    <!-- rank Column -->
+    <ng-container matColumnDef="rank">
+      <mat-header-cell *matHeaderCellDef> Rank </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
+    </ng-container>
+
+    <!-- user Column -->
+    <ng-container matColumnDef="user">
+      <mat-header-cell *matHeaderCellDef> User </mat-header-cell>
+      <mat-cell *matCellDef="let data"> {{data.user}} </mat-cell>
+    </ng-container>
+
+    <!-- score Column -->
+    <ng-container matColumnDef="score">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Score </mat-header-cell>
+      <mat-cell *matCellDef="let data"> {{data.score}} </mat-cell>
+    </ng-container>
+
+    <!-- quiz Column -->
+    <ng-container matColumnDef="quiz">
+      <mat-header-cell *matHeaderCellDef> Quiz </mat-header-cell>
+      <mat-cell *matCellDef="let element"> Elixir </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+
+</div>

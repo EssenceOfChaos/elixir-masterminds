@@ -60,7 +60,7 @@ export class QuizComponent implements OnInit {
   submitChoice(response) {
     this.checkAnswer(response);
     this.isAnswered = true;
-    if (this.index == this.questions.length - 1) {
+    if (this.index === this.questions.length - 1) {
       console.log('this quiz is now over');
       this.quizFinished = true;
       this.recordScore(this.userName, this.correct);
@@ -69,23 +69,13 @@ export class QuizComponent implements OnInit {
   }
 
   checkAnswer(choice) {
-    let answer = this.answers[this.index - 1].choice;
-    if (choice == answer) {
+    const answer = this.answers[this.index - 1].choice;
+    if (choice === answer) {
       this.correctAnswer = 'yes';
       this.correct = this.correct + 1;
     } else {
       this.correctAnswer = 'no';
     }
-  }
-
-  nextQuestion(i: number) {
-    if (i >= this.questions.length) {
-      i = 0;
-    }
-    this.question = of(this.questions[i]);
-    this.index++;
-    this.isAnswered = false;
-    this.correctAnswer = 'unanswered';
   }
 
   recordScore(user, score) {
