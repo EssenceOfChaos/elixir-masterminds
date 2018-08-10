@@ -1,3 +1,16 @@
-<p>
-  home works!
-</p>
+<div style="text-align:center">
+  <h1>
+    Think you know Elixir?
+  </h1>
+  <img src="assets/images/elixir-logo.png" alt="Elixir logo" class="elixirLogo" height="120" width="120">
+</div>
+
+
+<div *ngIf="!auth.isAuthenticated()" class="get_started">
+  <h3 style="text-align:center">Take the Elixir Quiz now and see how you measure up</h3>
+  <button mat-raised-button (click)="auth.login()">Log in</button>
+</div>
+
+<div *ngIf="auth.isAuthenticated()" class="get_started">
+  <button mat-raised-button color="secondary" id="begin_quiz" routerLink="/quiz">Start Quiz</button>
+</div>

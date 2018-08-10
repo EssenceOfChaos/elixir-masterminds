@@ -10,11 +10,21 @@ export class QuizService {
   constructor(private http: HttpClient) {}
 
   getQuestions(): Observable<any> {
-    // return this.http.get(this._url);
     return this.http.get(this.apiUrl).pipe(
       retry(3),
       catchError(this.handleError)
     );
+  }
+
+  addScore(user, score) {
+    const uri = '/api/scores';
+    const scores = {
+      user: user,
+      score: score,
+    };
+    this.http
+      .post(uri, scores)
+      .subscribe(res => console.log(`Quiz service: Score recorded! and provided the response ${res}`));
   }
 
   // generic error handler

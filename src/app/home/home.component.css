@@ -1,0 +1,22 @@
+a {
+  cursor: pointer;
+}
+
+.get_started {
+  text-align: center;
+}
+
+.elixirLogo {
+  margin-bottom: 15px;
+}
+
+#begin_quiz {
+  background-color: #607D8B;
+  color: ghostwhite;
+}
+
+#begin_quiz:hover {
+  opacity: 1;
+  background-color: #607D8B;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .14)
+}

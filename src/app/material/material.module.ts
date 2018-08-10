@@ -10,6 +10,12 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCardModule } from '@angular/material/card';
 import { MatSelectModule } from '@angular/material/select';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatListModule } from '@angular/material/list';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatTableModule } from '@angular/material/table';
+
 @NgModule({
   imports: [CommonModule],
   declarations: [],
@@ -23,6 +29,11 @@ import { MatDividerModule } from '@angular/material/divider';
     MatCardModule,
     MatSelectModule,
     MatDividerModule,
+    MatRadioModule,
+    MatProgressBarModule,
+    MatListModule,
+    MatChipsModule,
+    MatTableModule,
   ],
 })
 export class MaterialModule {}

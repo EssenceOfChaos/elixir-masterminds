@@ -1,3 +1,48 @@
-<p>
-  quiz works!
-</p>
+<div>
+  <p>You are logged in as
+    <span class="nickname">
+      <strong> {{userName}}</strong>
+    </span>
+  </p>
+</div>
+<mat-card class="numCorrect-indicator">
+  <h3>Number Correct: {{correct}}</h3>
+</mat-card>
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{title}}</mat-card-title>
+    <mat-card-subtitle>Question # {{index}} of {{questions.length - 1}} </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <p>
+      {{questions[index].question}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <mat-radio-group class="example-radio-group" [(ngModel)]="response">
+      <mat-radio-button class="example-radio-button" *ngFor="let choice of questions[index].choices" [value]="choice">
+        {{choice}}
+      </mat-radio-button>
+
+    </mat-radio-group>
+
+  </mat-card-actions>
+  <button mat-raised-button color="primary" (click)="submitChoice(response)" [style.visibility]="(isAnswered === true) ? 'hidden' : 'visible' ">
+    Submit
+  </button>
+  <!--- TODO: remove from DOM instead of changing visability -->
+  <button mat-raised-button color="accent" style="float:right;" (click)="nextQuestion(index + 1)" [style.visibility]="(isAnswered === false) ? 'hidden' : 'visible' ">
+    Next Question
+  </button>
+  <mat-card-footer *ngIf="correctAnswer == 'no'">
+    <h2 style="text-align:center;"> Sorry, that's incorrect.
+      <img src="assets/images/redx.svg" height="40" width="40">
+    </h2>
+  </mat-card-footer>
+  <mat-card-footer *ngIf="correctAnswer == 'yes'">
+    <h2 style="text-align:center;"> Great Job!
+      <img src="assets/images/greenv.svg" height="40" width="40">
+    </h2>
+  </mat-card-footer>
+</mat-card>

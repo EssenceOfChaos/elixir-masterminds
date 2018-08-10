@@ -1,0 +1,45 @@
+.example-card {
+  margin: auto;
+  margin-top: 50px;
+  max-width: 600px;
+  text-align: left;
+}
+
+.example-header-image {
+  background-image: url('https://i.imgur.com/krGAAQ5.png');
+  background-size: cover;
+}
+
+.example-radio-group {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.example-radio-button {
+  margin: 5px;
+}
+
+.example-selected-value {
+  margin: 15px 0;
+}
+
+.float-right {
+  margin-right: 0;
+}
+
+p {
+  font-family: 'Tajawal', sans-serif;
+  font-size: 18px;
+}
+
+.mat-card-title {
+  font-size: 16px;
+}
+
+.mat-card-subtitle {
+  font-size: 16px;
+}
+
+.numCorrect-indicator {
+  max-width: 200px;
+}
