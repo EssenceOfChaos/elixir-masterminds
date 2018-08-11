@@ -5,6 +5,7 @@
 export const environment = {
   production: false,
   apiUrl: '/assets/quiz.json',
+  callbackUrl: 'http://localhost:4200',
 };
 
 /*
