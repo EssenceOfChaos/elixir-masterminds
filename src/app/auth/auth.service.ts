@@ -13,7 +13,7 @@ export class AuthService {
     domain: AUTH_CONFIG.domain,
     responseType: 'token id_token',
     audience: 'http://api.localhost:4200',
-    redirectUri: AUTH_CONFIG.callbackURL,
+    redirectUri: 'https://elixir-quiz.herokuapp.com',
     scope: this.requestedScopes,
   });
 
