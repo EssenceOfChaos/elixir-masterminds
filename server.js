@@ -58,13 +58,19 @@ app.get("/api/scores", function (req, res) {
 });
 
 app.post("/api/scores", function (req, res) {
-  var newScore = req.body;
-  newScore.createDate = new Date();
+  let newScore = req.body;
+  let date = new Date();
+
+  const result = {
+    user: newScore.user,
+    score: newScore.score,
+    submitted_at: date
+  };
 
   if (!req.body) {
     handleError(res, "Invalid input", "Must provide score", 400);
   } else {
-    db.collection(SCORES_COLLECTION).insertOne(newContact, function (err, doc) {
+    db.collection(SCORES_COLLECTION).insertOne(result, function (err, doc) {
       if (err) {
         handleError(res, err.message, "Failed to create new score.");
       } else {

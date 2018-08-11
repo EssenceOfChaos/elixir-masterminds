@@ -18,13 +18,11 @@ export class QuizService {
 
   addScore(user, score) {
     const uri = '/api/scores';
-    const scores = {
+    const result = {
       user: user,
       score: score,
     };
-    this.http
-      .post(uri, scores)
-      .subscribe(res => console.log(`Quiz service: Score recorded! and provided the response ${res}`));
+    return this.http.post(uri, result).pipe(catchError(this.handleError));
   }
 
   // generic error handler
