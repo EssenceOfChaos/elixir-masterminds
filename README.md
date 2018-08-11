@@ -1,5 +1,9 @@
 # ElixirQuiz
 
+**created by Frederick John**
+
+## Please note: this application is currently a work in progress. Pull requests, suggestions welcome!
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
 ## Development server
