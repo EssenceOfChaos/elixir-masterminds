@@ -6,7 +6,7 @@
   }, {
     "id": 1,
     "tip": "Use the =~ operator to check if a string on the left-hand-side includes a substring on the right-hand-side:",
-    "code": "I'm a coding example"
+    "code": "iex> 'tester' =~ 'test' # true"
   }, {
     "id": 2,
     "tip": "Use introspection, i/1,  to find out more information about a value.",

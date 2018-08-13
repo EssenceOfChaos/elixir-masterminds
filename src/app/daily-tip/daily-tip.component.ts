@@ -18,4 +18,7 @@ export class DailyTipComponent implements OnInit {
       }
     });
   }
+  closeTip() {
+    // close the daily-tip
+  }
 }
