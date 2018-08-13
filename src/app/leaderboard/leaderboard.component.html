@@ -1,12 +1,12 @@
 <h2 style="text-align:center;">
   The Leaderboard
 </h2>
-<div class="example-container mat-elevation-z8">
+<div class="container mat-elevation-z8">
   <mat-table [dataSource]="dataSource" matSort>
     <!-- rank Column -->
     <ng-container matColumnDef="rank">
       <mat-header-cell *matHeaderCellDef> Rank </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
+      <mat-cell *matCellDef="let element"> {{rank + 1}} </mat-cell>
     </ng-container>
 
     <!-- user Column -->

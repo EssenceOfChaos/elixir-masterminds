@@ -8,6 +8,7 @@ import { MatTableDataSource, MatSort } from '@angular/material';
   styleUrls: ['./leaderboard.component.css'],
 })
 export class LeaderboardComponent implements OnInit, AfterViewInit {
+  rank = 0;
   displayedColumns = ['rank', 'user', 'score', 'quiz'];
   dataSource;
 

@@ -29,7 +29,7 @@ export const ANSWERS = [
   },
   {
     id: 8,
-    choice: 'true',
+    choice: 'false',
   },
   {
     id: 9,
