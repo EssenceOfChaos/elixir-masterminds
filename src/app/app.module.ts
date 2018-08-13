@@ -11,6 +11,7 @@ import { AuthService } from './auth/auth.service';
 import { AuthGuardService } from './auth/auth-guard.service';
 import { ScopeGuardService } from './auth/scope-guard.service';
 import { QuizService } from './quiz/quiz.service';
+import { DailyTipService } from './daily-tip/daily-tip.service';
 // import material design module
 import { MaterialModule } from './material/material.module';
 import { HomeComponent } from './home/home.component';
@@ -19,6 +20,7 @@ import { AdminComponent } from './admin/admin.component';
 import { LeaderboardComponent } from './leaderboard/leaderboard.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { CallbackComponent } from './callback/callback.component';
+import { DailyTipComponent } from './daily-tip/daily-tip.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +30,7 @@ import { CallbackComponent } from './callback/callback.component';
     LeaderboardComponent,
     QuizComponent,
     CallbackComponent,
+    DailyTipComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,7 +41,7 @@ import { CallbackComponent } from './callback/callback.component';
     ReactiveFormsModule,
     FormsModule,
   ],
-  providers: [AuthService, AuthGuardService, ScopeGuardService, QuizService],
+  providers: [AuthService, AuthGuardService, ScopeGuardService, QuizService, DailyTipService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

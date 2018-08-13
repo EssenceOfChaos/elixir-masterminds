@@ -3,20 +3,18 @@ import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 
-@Injectable({
-  providedIn: 'root',
-})
-export class LeaderboardService {
-  private _url = '/api/scores';
+@Injectable()
+export class DailyTipService {
+  apiUrl = '/assets/tips.json';
   constructor(private http: HttpClient) {}
 
-  getScores() {
-    return this.http.get(this._url).pipe(
+  getTips(): Observable<any> {
+    return this.http.get(this.apiUrl).pipe(
       retry(3),
       catchError(this.handleError)
     );
   }
-  // General Error Handling Function
+  // generic error handler
   private handleError(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {
       console.error('An error occurred:', error.error.message);

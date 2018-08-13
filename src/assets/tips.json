@@ -1,0 +1,15 @@
+{
+  "tips": [{
+    "id": 0,
+    "tip": "Skip this question start at index 1",
+    "code": "here is where a code example would go"
+  }, {
+    "id": 1,
+    "tip": "Use the =~ operator to check if a string on the left-hand-side includes a substring on the right-hand-side:",
+    "code": "I'm a coding example"
+  }, {
+    "id": 2,
+    "tip": "Use introspection, i/1,  to find out more information about a value.",
+    "code": "code example"
+  }]
+}

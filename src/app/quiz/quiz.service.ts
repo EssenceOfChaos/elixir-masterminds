@@ -2,11 +2,11 @@ import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { environment } from '../../environments/environment';
+// import { environment } from '../../environments/environment';
 
 @Injectable()
 export class QuizService {
-  apiUrl = environment.apiUrl;
+  apiUrl = '/assets/quiz.json';
   constructor(private http: HttpClient) {}
 
   getQuestions(): Observable<any> {
