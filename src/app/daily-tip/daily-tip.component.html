@@ -1,4 +1,4 @@
-<div class="banner">
+<div class="banner" *ngIf="visable">
   <span class="closebtn" (click)="closeTip()">&times;</span>
-  <p> {{tips[1].tip}}</p>
+  <p>{{tips[1].tip}}</p>
 </div>

@@ -8,6 +8,7 @@ import { DailyTipService } from './daily-tip.service';
 })
 export class DailyTipComponent implements OnInit {
   tips;
+  visable = true;
   constructor(private dailyTipService: DailyTipService) {}
 
   ngOnInit() {
@@ -20,5 +21,6 @@ export class DailyTipComponent implements OnInit {
   }
   closeTip() {
     // close the daily-tip
+    this.visable = false;
   }
 }
