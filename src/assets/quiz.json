@@ -26,12 +26,12 @@
     },
     {
       "id": 4,
-      "question": "If the variable 'list' is bound to: `[1, 2, 3]`, what is the result of the following expression, `[4, 5 | list]` ? ",
+      "question": "If the variable list is bound to: [1, 2, 3], what is the result of the following expression, [4, 5 | list] ? ",
       "choices": ["[1, 2, 3, 4, 5]", "[4, 5, 1, 2, 3]", "[4, 5]", "The expression contains an error"]
     },
     {
       "id": 5,
-      "question": "What is the result of the following expression: `String.graphemes(\"elixir\")` ? ",
+      "question": "What is the result of the following expression: String.graphemes(\"elixir\") ? ",
       "choices": ["[\"e\",\"l\",\"i\",\"x\",\"i\",\"r\"]", "elixir", "true", "false"]
     },
     {
@@ -46,12 +46,12 @@
     },
     {
       "id": 8,
-      "question": "All functions must be defined within a module. ",
+      "question": "In Elixir, functions must be defined within a class. ",
       "choices": ["true", "false"]
     },
     {
       "id": 9,
-      "question": "What will be the result of 'a' in the following pattern match? '[a, _, c] = [:hello, :world, :error]' ? ",
+      "question": "What will be the result of a in the following pattern match? [a, _, c] = [:hello, :world, :error] ? ",
       "choices": ["The match will fail", ":hello", ":world", "[:hello, :world, :error]"]
     }
   ]

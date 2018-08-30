@@ -10,3 +10,10 @@
 .title.no-decor:hover {
   text-shadow: 2px 2px 4px #000000;
 }
+
+aside>p,
+h2 {
+  display: block;
+  margin: auto;
+  text-align: center;
+}

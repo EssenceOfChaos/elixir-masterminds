@@ -80,7 +80,7 @@ export class QuizComponent implements OnInit {
 
   recordScore(user, score) {
     console.log(`USER: ${user} AND SCORE: ${score}`);
-    this.quizService.addScore(this.userName, this.correct);
+    this.quizService.addScore(user, score);
   }
 
   // get user name for saving score later
