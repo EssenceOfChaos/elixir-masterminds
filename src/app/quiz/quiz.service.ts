@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
+import { Quiz } from './quiz';
 import { catchError, retry } from 'rxjs/operators';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 // import { environment } from '../../environments/environment';
 
 @Injectable()
 export class QuizService {
-  apiUrl = '/assets/quiz.json';
+  // apiUrl = '/assets/quiz.json';
+  apiUrl = '/api/scores';
   constructor(private http: HttpClient) {}
 
   getQuestions(): Observable<any> {
@@ -17,12 +19,12 @@ export class QuizService {
   }
 
   addScore(user, score) {
-    const uri = '/api/scores';
+    console.log(`user is ${user} with a score of ${score}`);
     const result = {
       user: user,
       score: score,
     };
-    return this.http.post(uri, result).pipe(catchError(this.handleError));
+    return this.http.post<Quiz>(this.apiUrl, result).pipe(catchError(this.handleError));
   }
 
   // generic error handler
