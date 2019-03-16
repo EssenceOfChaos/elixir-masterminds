@@ -7,6 +7,7 @@ import { AuthService } from './auth/auth.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
+  year = Date.now();
   title = 'This will soon be the <tip-of-the-day>';
   profile: any;
 

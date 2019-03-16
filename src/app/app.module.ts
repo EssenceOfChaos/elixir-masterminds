@@ -21,6 +21,7 @@ import { LeaderboardComponent } from './leaderboard/leaderboard.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { CallbackComponent } from './callback/callback.component';
 import { DailyTipComponent } from './daily-tip/daily-tip.component';
+
 @NgModule({
   declarations: [
     AppComponent,

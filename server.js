@@ -1,10 +1,13 @@
-let express = require("express");
-let bodyParser = require("body-parser");
-let mongodb = require("mongodb");
-let ObjectID = mongodb.ObjectID;
+require('dotenv').config()
+
+
+const express = require("express");
+const bodyParser = require("body-parser");
+const mongodb = require("mongodb");
+const ObjectID = mongodb.ObjectID;
 // const cors = require('cors');
 
-let SCORES_COLLECTION = "scores";
+const SCORES_COLLECTION = "scores";
 // const Score {
 //   user: new ObjectID()
 //   score: Number
@@ -59,6 +62,7 @@ app.get("/api/scores", function (req, res) {
 
 app.post("/api/scores", function (req, res) {
   let newScore = req.body;
+  console.log(`The current value of newScore: ${newScore}`);
   let date = new Date();
 
   const result = {

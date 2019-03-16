@@ -2,6 +2,7 @@
 font-family: 'Indie Flower', cursive; */
 
 @import "~@angular/material/prebuilt-themes/pink-bluegrey.css";
+
 body {
   min-height: 100%;
   font-size: 16px;
@@ -42,18 +43,25 @@ aside {
 footer {
   padding: 20px;
   grid-area: footer;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #C2185B;
+  color: white;
+  text-align: center;
 }
 
 .wrapper {
   display: grid;
   grid-gap: 10px;
   grid-template-columns: 1fr 3fr;
-  grid-template-areas: "header  header" "sidebar content" "footer  footer";
+  grid-template-areas: "header  header""sidebar content""footer  footer";
 }
 
 @media (max-width: 500px) {
   .wrapper {
     grid-template-columns: 4fr;
-    grid-template-areas: "header" "content" "sidebar" "footer";
+    grid-template-areas: "header""content""sidebar""footer";
   }
 }
